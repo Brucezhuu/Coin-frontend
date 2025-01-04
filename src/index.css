@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-group div {
+  margin-right: 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;
+}
+
+.warning {
+  margin-top: 15px;
+  color: #d9534f;
+  background-color: #f9e2e2;
+  padding: 10px;
+  border: 1px solid #d43f3a;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
+.result {
+  margin-top: 20px;
+  background: #e8f5e9;
+  padding: 10px;
+  border: 1px solid #a5d6a7;
+  border-radius: 4px;
+}
+
+.result h2 {
+  margin-top: 0;
+}
