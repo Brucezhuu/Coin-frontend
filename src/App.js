@@ -40,7 +40,8 @@ function App() {
       amountError !== "" || selectedDenominations.length === 0
     );
   };
-
+  const API_URL = "http://backend:8080/api";
+	
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
