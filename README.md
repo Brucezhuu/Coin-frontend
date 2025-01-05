@@ -65,3 +65,50 @@ const response = await fetch("http://<your-backend-ip>:8080/api/compute", {
 });
 ```
 
+
+## Using Docker Compose to Run Frontend and Backend
+You can use docker-compose to run both the frontend and backend services together. Here is how:
+
+1. Create a docker-compose.yml File
+In the root directory of your project (outside both the frontend and backend folders), create a docker-compose.yml file with the following content:
+
+```yaml
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./hola-dropwizard
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./coinfrontend
+    ports:
+      - "80:80"
+```
+2. Directory Structure
+Ensure your project directory is structured as follows:
+```lua
+project-root/
+├── docker-compose.yml
+├── hola-dropwizard/
+│   ├── Dockerfile
+│   ├── config.yml
+│   └── ... (backend files)
+├── coinfrontend/
+│   ├── Dockerfile
+│   ├── package.json
+│   └── ... (frontend files)
+```
+3. Start Both Services
+Run the following command in the root directory where docker-compose.yml is located:
+```bash
+docker-compose up --build
+```
+
+4. Access the Services
+
+- Frontend: Open your browser and go to http://<EC2 Public IP> (or http://localhost if running locally).
+
+- Backend: The backend will be accessible at http://<EC2 Public IP>:8080/api/compute.
